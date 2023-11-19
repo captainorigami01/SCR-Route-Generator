@@ -9,7 +9,7 @@ import webbrowser
 
 # update checker
 
-VERSION = "0.01"
+VERSION = "0.1"
 
 version_latest = urllib.request.urlopen("https://raw.githubusercontent.com/captainorigami01/SCR-Route-Generator/d1dd42ddf707a0a768005f7013ba75926de1ebb6/version")
 version_latest = version_latest.read()
