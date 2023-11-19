@@ -1,5 +1,5 @@
 import json
-import urllib
+import urllib.request
 import myObjects
 import time
 import verifyJson
@@ -9,8 +9,16 @@ import webbrowser
 
 # update checker
 
-VERSION = "0.1"
+VERSION = "0.01"
 
+version_latest = urllib.request.urlopen("https://raw.githubusercontent.com/captainorigami01/SCR-Route-Generator/d1dd42ddf707a0a768005f7013ba75926de1ebb6/version")
+version_latest = version_latest.read()
+
+CLI_WARN = "\033[93m"
+CLI_DEFAULT = "\033[0m"
+
+if float(VERSION) < float(version_latest):
+    print(f"{CLI_WARN}There is a new version available, please visit https://scr.captain-vc.com{CLI_DEFAULT}")
 
 verifyJson.checkroutes()
 verifyJson.checktrains()
