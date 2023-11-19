@@ -1,10 +1,11 @@
 # SCR Route Generator
 ![](https://img.shields.io/badge/SCR_Route_Generator-V0.1-green) ![](https://img.shields.io/badge/SCR_version-1.10.12-blue)
+
+> [Download V0.1](https://github.com/captainorigami01/SCR-Route-Generator/releases/tag/v0.1)
+>
+> Please check our [requirements](#requirements)
+
 ## What is our software?
-
-# When will we publish our code
-
-Within 3 hours from 19/11/2023 21:30 UTC
 
 Our software is designed to be used to generate routes for both passengers and drivers.
 In passenger mode you are given 2 locations; a start and end location. The catch is that you have to get from the 2 stations as qucikly as possible. We have a timer function in our software. You should start the timer when you get on a train at the start location and should stop it when you disembark the last train at your destination.
