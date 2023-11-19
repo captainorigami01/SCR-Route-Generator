@@ -1,5 +1,5 @@
 # SCR Route Generator
-![](https://img.shields.io/badge/SCR_Route_Generator-V0.1-green)
+![](https://img.shields.io/badge/SCR_Route_Generator-V0.1-green) ![](https://img.shields.io/badge/SCR_version-1.10.12-blue)
 ## What is our software?
 
 Our software is designed to be used to generate routes for both passengers and drivers.
