@@ -29,7 +29,7 @@ You will require [python 3](https://www.python.org/downloads/) to run our progra
 Our software has been designed using Windowss 11 but should work on all windows operating systems. We cannot gaurantee that the software will run correctly on other operating systems. If it does not please alert this to us as a bug in the [issues](https://github.com/captainorigami01/SCR-Route-Generator/issues) and we will try to fix it if possible.
 
 # Our project to do list
-Our project has a to do list, each version will be given its own view. [View the to do list](https://github.com/users/captainorigami01/projects/4/views/1)
+Our project has a to do list, each version will be given its own view. [View the to do list](https://github.com/users/captainorigami01/projects/4/views/2)
 
 # Terms / license
 The 'software` is protected by the [GNU GENERAL PUBLIC LICENSE v3](https://github.com/captainorigami01/SCR-Route-Generator/blob/main/LICENSE)
