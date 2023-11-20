@@ -11,7 +11,7 @@ import webbrowser
 
 os.system("color")
 
-VERSION = "0.01"
+VERSION = "0.1"
 
 version_latest = urllib.request.urlopen("https://raw.githubusercontent.com/captainorigami01/SCR-Route-Generator/d1dd42ddf707a0a768005f7013ba75926de1ebb6/version")
 version_latest = version_latest.read()
@@ -81,7 +81,36 @@ if inp2 == "1":
         selectedTrain = ownedTrains[random.randint(0, len(ownedTrains)-1)]
         selectedTrainOperator = trains[selectedTrain]["operator"]
     print(selectedTrain)
-    for x in range(0, random.randint(4, 15)):
+    rand = 0
+    try:
+        rand = int(input("How many services would you like on your timetable?\nEnter 0 for random\n"))
+    except ValueError as err:
+        print(f"An error occured and a number was expected not a string")
+        input()
+        exit()
+
+    rangeLow = 4
+    rangeHigh = 15
+    if rand == 0:
+        try:
+            rangeLow = int(input("Enter the minimum number of services you would like (has to be at least 1)\n"))
+            while rangeLow <= 0:
+                print(f"It has to be at least 1 not {rangeLow}")
+                rangeLow = int(input("Enter the minimum number of services you would like (has to be at least 1)\n"))
+            rangeHigh = int(input("Enter the maximum number of services you would like "
+                                  "(We reccommend no more than 15)\n"))
+            while rangeHigh <= rangeLow:
+                print(f"The maximum number has to be more than the minimum, you selected {rangeHigh}")
+                rangeHigh = int(input("Enter the maximum number of services you would like "
+                                      "(We reccommend no more than 15)\n"))
+        except TypeError as err:
+            print("An error occured and a number was expected not a string")
+            input()
+            exit()
+    else:
+        rangeLow = rangeHigh = rand
+
+    for x in range(0, random.randint(rangeLow, rangeHigh)):
         currentOperator = ""
         while currentOperator != selectedOperator:
             routeSelected = ownedRoutes[random.randint(0, len(ownedRoutes)-1)]
