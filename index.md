@@ -1,7 +1,7 @@
 # SCR Route Generator
-![](https://img.shields.io/badge/SCR_Route_Generator-V0.11-green) ![](https://img.shields.io/badge/SCR_version-1.10.12-blue)
+![](https://img.shields.io/badge/SCR_Route_Generator-V0.12-green) ![](https://img.shields.io/badge/SCR_version-1.10.12-blue)
 
-> [Download V0.11](https://github.com/captainorigami01/SCR-Route-Generator/releases/tag/v0.11)
+> [Download V0.12](https://github.com/captainorigami01/SCR-Route-Generator/releases/tag/v0.12)
 >
 > Please check our [requirements](#requirements)
 
