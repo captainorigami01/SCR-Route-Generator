@@ -11,7 +11,7 @@ import webbrowser
 
 os.system("color")
 
-VERSION = "0.12"
+VERSION = "0.13"
 
 version_latest = urllib.request.urlopen("https://raw.githubusercontent.com/captainorigami01/SCR-Route-Generator/main/version")
 version_latest = version_latest.read().decode("UTF-8")
