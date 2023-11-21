@@ -11,10 +11,10 @@ import webbrowser
 
 os.system("color")
 
-VERSION = "0.11"
+VERSION = "0.12"
 
-version_latest = urllib.request.urlopen("https://raw.githubusercontent.com/captainorigami01/SCR-Route-Generator/d1dd42ddf707a0a768005f7013ba75926de1ebb6/version")
-version_latest = version_latest.read()
+version_latest = urllib.request.urlopen("https://raw.githubusercontent.com/captainorigami01/SCR-Route-Generator/main/version")
+version_latest = version_latest.read().decode("UTF-8")
 
 CLI_WARN = "\033[93m"
 CLI_DEFAULT = "\033[0m"
@@ -80,7 +80,6 @@ if inp2 == "1":
     while selectedTrain is None or selectedTrainOperator != selectedOperator:
         selectedTrain = ownedTrains[random.randint(0, len(ownedTrains)-1)]
         selectedTrainOperator = trains[selectedTrain]["operator"]
-    print(selectedTrain)
     rand = 0
     try:
         rand = int(input("How many services would you like on your timetable?\nEnter 0 for random\n"))
