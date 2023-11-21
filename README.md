@@ -1,6 +1,6 @@
 # SCR-Route-Generator
 
-![](https://img.shields.io/badge/SCR_Route_Generator-V0.12-green) ![](https://img.shields.io/badge/SCR_version-1.10.12-blue)
+![](https://img.shields.io/badge/SCR_Route_Generator-V0.13-green) ![](https://img.shields.io/badge/SCR_version-1.10.12-blue)
 
 Route Generator for Stepford County Railway for passengers and drivers
 
