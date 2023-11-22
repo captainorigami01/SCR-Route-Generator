@@ -11,7 +11,7 @@ import webbrowser
 
 os.system("color")
 
-VERSION = "0.13"
+VERSION = "0.14"
 
 version_latest = urllib.request.urlopen("https://raw.githubusercontent.com/captainorigami01/SCR-Route-Generator/main/version")
 version_latest = version_latest.read().decode("UTF-8")
@@ -53,8 +53,8 @@ while inp2 not in ["1", "2"]:
 
 if inp2 == "1":
     print("Please ensure all owned routes and trains are entered into the ownedRoutesTrains.json file")
-    with open("ownedRoutesTrains.json", "r") as f:
-        owned = json.loads(f.read())
+    with open("ownedRoutesTrains.json", "r", encoding="utf-8") as f:
+        owned = json.load(f)
         ownedTrains = owned["trains"]["owned"]
         ownedRoutes = owned["routes"]["owned"]
         ownedOperators = owned["operators"]["owned"]
