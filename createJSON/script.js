@@ -15,6 +15,17 @@ userJson = {"routes":{"owned": []},"trains":{"owned": []},"operators":{"owned": 
 </div>
 */
 cards = "";
+
+for(operator in operators){
+    op = operators[operator];
+    cards += "<div onclick='selectOperator(\""+op+"\")' id='"+op+"' class='card'><div class='card-header'>Operator: "+op+"</div>";
+
+
+    cards += "<div class='card-body'><h5 class='card-title'>"+op+"</h5>";
+    cards += "<p class='card-text'>Operator: "+op+"</p>";
+    cards += "</div></div>";
+}
+
 for (route in routes){
     cards += "<div onclick='selectRoute(\""+route+"\")' id='"+route+"' class='card'><div class='card-header'>"+route+"</div>";
 
@@ -35,7 +46,6 @@ for(train in trains){
 }
 
 function selectRoute(routeID){
-    console.log(routeID);
     document.getElementById(routeID).classList.toggle("selected");
     routesOwned = userJson["routes"]["owned"];
     if (routesOwned.includes(routeID)){
@@ -49,7 +59,6 @@ function selectRoute(routeID){
 }
 
 function selectTrain(trainID){
-    console.log(trainID);
     document.getElementById(trainID).classList.toggle("selected");
     trainsOwned = userJson["trains"]["owned"];
     if (trainsOwned.includes(trainID)){
@@ -62,10 +71,34 @@ function selectTrain(trainID){
     }
 }
 
+function selectOperator(operatorID){
+    document.getElementById(operatorID).classList.toggle("selected");
+    operatorsOwned = userJson["operators"]["owned"];
+    if (operatorsOwned.includes(operatorID)){
+        idx = operatorsOwned.indexOf(operatorID);
+        operatorsOwned.splice(idx, 1);
+        userJson["operators"]["owned"] = operatorsOwned;
+    }else{
+        operatorsOwned.push(operatorID)
+        userJson["operators"]["owned"] = operatorsOwned
+    }
+}
+
 function loadItems(){
     document.getElementById("myCards").innerHTML = cards;
 }
 
 function createJson(){
-    console.log(userJson);
+    // console.log(userJson);
+       outputJson = JSON.stringify(userJson);
+    var file = new File(["\ufeff"+outputJson], "ownedRoutesTrains.json", {type: "application/json:charset=UTF-8"});
+
+    url = window.URL.createObjectURL(file);
+    var a = document.createElement("a");
+    a.style = "display:none;";
+    a.href = url;
+    a.download = file.name;
+    a.click();
+    window.URL.revokeObjectURL(url);
+
 }
