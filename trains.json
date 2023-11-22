@@ -151,11 +151,11 @@
         "operator": "airlink",
         "length": "3+3"
     },
-    "332": {
+    "332/0": {
         "operator": "airlink",
         "length": "4"
     },
-    "332I": {
+    "332/1": {
         "operator": "airlink",
         "length": "5"
     },
@@ -163,11 +163,11 @@
         "operator": "airlink",
         "length": "7"
     },
-    "360A": {
+    "360/0": {
         "operator": "airlink",
         "length": "4"
     },
-    "360AI": {
+    "360/5": {
         "operator": "airlink",
         "length": "5"
     },

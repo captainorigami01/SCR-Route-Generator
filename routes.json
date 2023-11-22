@@ -69,7 +69,7 @@
         "operator": "connect",
         "duration": "8",
         "trains": ["A"],
-        "stops": ["Stepford Central", "Stepford East", "Stepford High Street", "Stepford United Football Club", "Woodhead Lane", "Whitefield"]
+        "stops": ["Beechley", "Stepford Central", "Stepford East", "Stepford High Street", "Stepford United Football Club", "Woodhead Lane", "Whitefield"]
     },
     "R023": {
         "operator": "connect",
