@@ -72,14 +72,32 @@ if inp2 == "1":
             exit()
 
     selectedOperator = ownedOperators[random.randint(0, len(ownedOperators)-1)]
+    userOperator = None
+    while userOperator is None:
+        userOperator = str(input("Please specify an operator or leave blank for random: "))
+        if userOperator != "":
+            if userOperator not in myObjects.operators:
+                userOperator = None
+            else:
+                selectedOperator = userOperator
     endOfRoute = None
     selectedTrain = None
     selectedTrainOperator = None
     nextRoute = None
+    selectTrain = None  # for user selection
+
 
     while selectedTrain is None or selectedTrainOperator != selectedOperator:
         selectedTrain = ownedTrains[random.randint(0, len(ownedTrains)-1)]
         selectedTrainOperator = trains[selectedTrain]["operator"]
+    while selectTrain is None:
+        selectTrain = str(input(f"Please enter the train you would like for operator {selectedOperator} or leave blank for random: "))
+        if selectTrain != "":
+            if selectTrain in trains and trains[selectTrain]["operator"] == selectedOperator:
+                selectedTrain = selectTrain
+            else:
+                print(f"{selectTrain} does not exist for opertator: {selectedOperator}")
+                selectTrain = None
     rand = 0
     try:
         rand = int(input("How many services would you like on your timetable?\nEnter 0 for random\n"))
