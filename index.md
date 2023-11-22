@@ -9,6 +9,8 @@
 > 
 > By default all routes, trains and operators can be used. If you own everything then you will not need to generate the JSON file
 
+[JSON Generator](/createJSON)
+
 ## What is our software?
 
 Our software is designed to be used to generate routes for both passengers and drivers.
