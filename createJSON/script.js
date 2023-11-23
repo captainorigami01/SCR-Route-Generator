@@ -16,6 +16,23 @@ userJson = {"routes":{"owned": []},"trains":{"owned": []},"operators":{"owned": 
 */
 cards = "";
 
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
 for(operator in operators){
     op = operators[operator];
     cards += "<div onclick='selectOperator(\""+op+"\")' id='"+op+"' class='card'><div class='card-header'>Operator: "+op+"</div>";
@@ -101,4 +118,34 @@ function createJson(){
     a.click();
     window.URL.revokeObjectURL(url);
 
+    let date = new Date();
+    date.setTime(date.getTime() + (365*24*60*60*1000));
+    var expires = date.toUTCString();
+    document.cookie = "JSONdata="+outputJson+";expires="+expires+";path=/";
+
+}
+
+function getOwnedRoutesPrevious(){
+    if (getCookie("JSONdata") == ""){
+        outputJson = JSON.stringify(userJson);
+        let date = new Date();
+        date.setTime(date.getTime() + (365*24*60*60*1000));
+        var expires = date.toUTCString();
+        document.cookie = "JSONdata="+outputJson+"; expires="+expires+";path=/";
+    }else{
+        userJson = JSON.parse(getCookie("JSONdata"));
+        for(route in userJson["routes"]["owned"]){
+            routeID = userJson["routes"]["owned"][route]
+            console.log(routeID);
+            document.getElementById(routeID).classList.add("selected");
+        }
+        for(operator in userJson["operators"]["owned"]){
+            operatorID = userJson["operators"]["owned"][operator];
+            document.getElementById(operatorID).classList.add("selected");
+        }
+        for(train in userJson["trains"]["owned"]){
+            trainID = userJson["trains"]["owned"][train];
+            document.getElementById(trainID).classList.add("selected");
+        }
+    }
 }
