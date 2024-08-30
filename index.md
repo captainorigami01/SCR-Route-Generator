@@ -1,5 +1,12 @@
 # SCR Route Generator
-![](https://img.shields.io/badge/SCR_Route_Generator-V0.15-green) ![](https://img.shields.io/badge/SCR_version-1.10.12-blue)
+![](https://img.shields.io/badge/SCR_Route_Generator-V0.15-yellow) ![](https://img.shields.io/badge/SCR_version-1.10.12-red)
+
+> [!WARNING]
+> This app still works however development has been stopped ans is no longer supported, this app no longer supports the latest version of Stepford County Railway
+>
+> We are currently making a web app which requires no installation and will be announced here once it is ready. Want to be notified of the release then please vist our google group and sign up. We will only use it to send you updates as we prepare to roll out our web app. Once the web app is finished the group will be closed. [JOIN GROUP](https://groups.google.com/g/scr-wtt-captainorigami01).
+
+Any problems joining the mailing list above please message @captainorigami01 on discord privately
 
 > [Download V0.15](https://github.com/captainorigami01/SCR-Route-Generator/releases/tag/v0.15)
 >
