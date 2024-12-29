@@ -6,6 +6,10 @@ Route Generator for Stepford County Railway for passengers and drivers
 
 please see our wesbite for details: [https://scr.captain-vc.com](https://scr.captain-vc.com)
 
+The new route generator is nearly ready for beta testing. For those interested we have 4 spaces remaining. Please see the form below in the important notice to apply
+
+Beta testing will commence from the 1st of January to the 29th of January. A Roblox account is required to participate and only 1 account per tester. You can you alt accounts once released to the public due to the fact the roblox OAuth is limited to a finite number of users until it has been approved which we are currently awaiting approval for
+
 # ⚠️ IMPORTANT NOTICE:
 
 i am cancelling the release of version 0.16 which was due to bring the release of the ability to share routes and fix some HTML bugs with the outputted timetables.
